@@ -21,10 +21,15 @@
 }
 .hei1{
     height: 9vh;
+}
+.line-height1{
+    display: inline-block;
     line-height: 9vh;
+    margin-bottom: 13px;
+    vertical-align: middle;
 }
 .hei2{
-    height: 18vh;
+    height: 22vh;
 }
 .hei3{
     height: 27vh;
@@ -80,4 +85,23 @@ img{
     justify-content: center;
     text-align: center;
 }
-
+.gztt{
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    font-size: 14px;
+}
+.title-position {
+    position: absolute;
+    top: 12%;
+}
+.font-14{
+    font-size: 14px;
+    color: #CCCCCC;
+}
+.font-16{
+    font-size: 20px;
+    color: #464545;
+    margin-bottom: 6px;
+}
