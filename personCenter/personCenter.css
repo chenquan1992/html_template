@@ -28,6 +28,9 @@
     margin-bottom: 13px;
     vertical-align: middle;
 }
+.line-height-9v{
+    line-height: 9vh;
+}
 .hei2{
     height: 22vh;
 }
@@ -45,6 +48,7 @@
     overflow-x: hidden;
     position: relative;
     height: 100vh;
+    background-color: #F5F5F5;
 }
 li{
     list-style:none
@@ -59,9 +63,7 @@ ul{
 .margin-left-right{
     margin: 0 20px 0 20px;
 }
-body{
-    background-color: #F5F5F5;
-}
+
 .minCircle{
     background-color: rebeccapurple;
     width: 15vh;
@@ -104,4 +106,21 @@ img{
     font-size: 20px;
     color: #464545;
     margin-bottom: 6px;
+}
+span{
+    font-size: 1.2em;
+    color: #828080;
+    font-weight: bold;
+    margin-left: 20px;
+}
+i{
+    color: #2B94FF;
+}
+.right{
+    float: right;
+    color: #CCCCCC;
+    font-weight: lighter;
+}
+.btn{
+    width: 80%;
 }
