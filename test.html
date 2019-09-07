@@ -1,60 +1,51 @@
-<!DOCTYPE html>
-<html class="reftest-wait">
-<style>
-    .container {
-        width: 100px;
-        height: 100px;
-        --length: 10px;
-        --number: 10;
-    }
-    #canvas-geometry {
-        background-image: paint(geometry);
-    }
-</style>
-<script src="/common/reftest-wait.js"></script>
-<script src="css-paint-tests.js"></script>
-<body>
-<div id="canvas-geometry" class="container"></div>
-
-<script id="code" type="text/worklet">
-registerPaint('geometry', class {
-    static get inputProperties() {
-        return [
-            '--length',
-            '--length-initial',
-            '--number',
-        ];
-    }
-    paint(ctx, geom, styleMap) {
-        const properties = styleMap.getProperties().sort();
-        var serializedStrings = [];
-        for (let i = 0; i < properties.length; i++) {
-            const value = styleMap.get(properties[i]);
-            let serialized;
-            if (value)
-                serialized = properties[i].toString() + ': [' + value.constructor.name + '=' + value.toString() + ']';
-            else
-                serialized = properties[i].toString() + ': [null]';
-            serializedStrings.push(serialized);
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+    <style type="text/css">
+        .left,.right{
+            min-height: 40px;
+            position: relative;
+            display: table;
+            text-align: center;
+            border-radius: 5px;
+            background-color: #9EEA6A;
         }
-        ctx.strokeStyle = 'green';
-        if (serializedStrings[0] != "--length: [CSSUnitValue=10px]")
-            ctx.strokeStyle = 'red';
-        if (serializedStrings[1] != "--length-initial: [CSSUnitValue=20px]")
-            ctx.strokeStyle = 'blue';
-        if (serializedStrings[2] != "--number: [CSSStyleValue=10]")
-            ctx.strokeStyle = 'yellow';
-        ctx.lineWidth = 4;
-        ctx.strokeRect(0, 0, geom.width, geom.height);
-    }
-});
-</script>
+        .right{      /*使左右的对话框分开*/
+            top: 40px;
+            left: 60px;
+        }
+        .left > p,.right > p{    /*使内容居中*/
+            display: table-cell;
+            vertical-align: middle;
+            padding: 0 10px;
+        }
+        .left:before,.right:after{   /*用伪类写出小三角形*/
+            content: '';
+            display: block;
+            width: 0;
+            height: 0;
+            border: 8px solid transparent;
+            position: absolute;
+            top: 11px;
+        }
+        /*分别给左右两边的小三角形定位*/
+        .left:before{
+            border-right: 8px solid #9EEA6A;
+            left: -16px;
+        }
+        .right:after{
+            border-left: 8px solid #9EEA6A;
+            right: -16px;
+        }
+    </style>
+</head>
 
-<script>
-    CSS.registerProperty({name: '--length', syntax: '<length>', initialValue: '0px'});
-    CSS.registerProperty({name: '--length-initial', syntax: '<length>', initialValue: '20px'});
-    CSS.registerProperty({name: '--number', syntax: '<number>', initialValue: '0'});
-    importPaintWorkletAndTerminateTestAfterAsyncPaint(document.getElementById('code').textContent);
-</script>
+<body>
+<div class="left">
+    <p>肥英美吗？</p>
+</div>
+<div class="right">
+    <p>计科最美</p>
+</div>
 </body>
 </html>
