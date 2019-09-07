@@ -40,9 +40,9 @@
 
 .down{
     position:absolute;
-    top: 55%;
+    top: 16%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%);
 }
 .position{
     overflow-x: hidden;
@@ -107,7 +107,7 @@ img{
     color: #464545;
     margin-bottom: 6px;
 }
-span{
+li>span:first-child{
     font-size: 1.2em;
     color: #828080;
     font-weight: bold;
