@@ -3,9 +3,6 @@ li{
     display: flex;
     margin-bottom: 16px;
 }
-.reverse{
-    flex-direction: row-reverse;
-}
 ul{
     margin: 0;
     padding: 0;
@@ -71,19 +68,41 @@ span{
     padding: 1em;
 }
 .minRectangle{
-    max-width: 70%;
-    overflow: hidden;
-    margin-left: 0.4em;
-    margin-right: 0.4em;
+    max-width: 66%;
+    margin-left: 1em;
+    margin-right: 1em;
+    position: relative;
+    border-radius: 0.4em;
+}
+.content-text{
     padding: 1em;
     font-size: 1.2em;
-    border-radius: 0.4em;
+}
+/* 右边样式 */
+.reverse{
+    flex-direction: row-reverse;
 }
 .reverse-color {
     background: #84B4F0;
     color: #F5F5F5;
 }
+/* 右边三角形 */
+.arrow-right {
+    position:absolute;
+    top:3vh;
+    border: 8px solid transparent;
+    border-left: 8px solid #84B4F0;
+    right: -16px;
+}
+/* 左边样式 */
 .row-color{
     background-color: #FFFFFF;
 }
-
+/* 左边三角形 */
+.arrow-left {
+    position:absolute;
+    top:3vh;
+    border: 8px solid transparent;
+    border-right: 8px solid #FFFFFF;
+    left: -16px;
+}
