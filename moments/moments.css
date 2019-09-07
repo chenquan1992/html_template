@@ -5,8 +5,11 @@ ul{
     margin: 0;
     padding: 0;
 }
+p {
+    font-size: 1.2em;
+}
 img{
-    width: inherit;
+    width: 100%;
 }
 span:nth-child(1){
     display: block;
@@ -20,7 +23,6 @@ span:nth-child(2){
     color: #C2C2C2;
     margin-left: 20px;
 }
-
 .position{
     overflow-x: hidden;
     position: relative;
@@ -28,11 +30,11 @@ span:nth-child(2){
     background-color: #F5F5F5;
 }
 .down{
-     position:absolute;
-     top: 7%;
-     left: 50%;
-     transform: translate(-50%);
- }
+    position:absolute;
+    top: 7%;
+    left: 50%;
+    transform: translate(-50%);
+}
 .circle {
     width: 150vh;
     height: 150vh;
@@ -48,21 +50,6 @@ span:nth-child(2){
     background: linear-gradient(45deg,#6beaf3,#428bf8,#24aadb,#27dbb1,#00b7ff,#6606ff);
 
 }
-.rectangle {
-    width: 86vw;
-    background: #FFFFFF;
-    border-radius: 8px;
-    margin-bottom: 18px;
-}
-.hei2{
-    height: 12vh;
-}
-.border-bottom{
-    border-bottom: 1px solid rgba(227, 227, 227, 0.49);
-}
-.margin-left-right{
-    margin: 0 20px 0 20px;
-}
 .minCircle{
     background-color: rebeccapurple;
     width: 8vh;
@@ -71,6 +58,50 @@ span:nth-child(2){
     -webkit-border-radius: 4vh;
     border-radius: 4vh;
     overflow: hidden;
+}
+.rectangle {
+    width: 86vw;
+    background: #FFFFFF;
+    border-radius: 8px;
+    margin-bottom: 18px;
+    padding: 20px;
+}
+.pictureBotton{
+    display: flex;
+    flex-wrap:wrap;
+}
+.minRectangleOne{
+    background-color: #FFFFFF;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+.minRectangleTwo{
+    background-color: #FFFFFF;
+    width: 50%;
+    height: auto;
+    overflow: hidden;
+    padding-right: 8px;
+    padding-bottom: 8px;
+}
+.minRectangleThree{
+    background-color: #FFFFFF;
+    width: 33.33%;
+    height: auto;
+    overflow: hidden;
+    padding-right: 8px;
+    padding-bottom: 8px;
+}
+.minRectangleFour{
+    background-color: #FFFFFF;
+    width: 25%;
+    height: auto;
+    overflow: hidden;
+    padding-right: 8px;
+}
+
+.padding-botton10{
+    padding-bottom: 10px;
 }
 .portait-center{
     display: flex;
