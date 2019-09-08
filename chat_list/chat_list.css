@@ -76,3 +76,7 @@ span:nth-child(2){
     display: flex;
     align-items: center;
 }
+.badge{
+    margin: 1em;
+    background-color: red;
+}
